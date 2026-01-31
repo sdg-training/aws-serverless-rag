@@ -84,10 +84,14 @@ Guardrails are enforced **during model generation**, not retrieval.
 ## 📄 Document Ingestion Flow
 
 1. Download the following tests documents (Amazon shareholder letters):
-   [AMZN-2019-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2019-Shareholder-Letter.pdf)
-   [AMZN-2020-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2020-Shareholder-Letter.pdf)
-   [AMZN-2021-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2021-Shareholder-Letter.pdf)
-   [AMZN-2022-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2022-Shareholder-Letter.pdf)
+
+- [AMZN-2019-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2019-Shareholder-Letter.pdf)
+
+- [AMZN-2020-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2020-Shareholder-Letter.pdf)
+
+- [AMZN-2021-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2021-Shareholder-Letter.pdf)
+
+- [AMZN-2022-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2022-Shareholder-Letter.pdf)
 
 2. Upload them to the S3 bucket created by the stack
 3. This triggers the `ChunkDataFunction`

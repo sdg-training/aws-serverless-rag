@@ -152,11 +152,11 @@ def augment_kb_response(kb_response, user_query):
             system=converse_request['system'],
             messages=converse_request["messages"],
             inferenceConfig=converse_request["inferenceConfig"],
-            # guardrailConfig={
-            #     "guardrailIdentifier": bedrock_guardrail_id,
-            #     "guardrailVersion": bedrock_guardrail_version,
-            #     "trace": "enabled"
-            # }
+            guardrailConfig={
+                "guardrailIdentifier": bedrock_guardrail_id,
+                "guardrailVersion": bedrock_guardrail_version,
+                "trace": "enabled"
+            }
         )
 
         # show bedrock intervention traces

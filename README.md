@@ -70,27 +70,25 @@ Guardrails are enforced **during model generation**, not retrieval.
 
 ---
 
-## 🚀 Getting Started (IMPORTANT)
+## 🚀 Getting Started (Instructions)
 
 ### Repository Setup
 
-This repository **does not include pipeline or Git metadata**.
-
-Each trainee must:
-
 1. **Clone the repository**
-2. **Initialize their own Git repository**
-3. **Create their own GitHub Actions pipeline**
-4. **Deploy using SAM via CI/CD**
-
-> ❗ Do **not** deploy using `sam deploy` locally
-> This lab intentionally reinforces **pipeline-first deployment**
+2. **Initialize Git repository for your personal github account**
+3. **Create GitHub Actions pipeline for multiple environments as needed**
+4. **Deploy resource to AWS using SAM via CI/CD**
 
 ---
 
 ## 📄 Document Ingestion Flow
 
-1. Download the provided test PDFs (Amazon shareholder letters)
+1. Download the following tests documents (Amazon shareholder letters):
+   [AMZN-2019-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2019-Shareholder-Letter.pdf)
+   [AMZN-2020-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2020-Shareholder-Letter.pdf)
+   [AMZN-2021-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2021-Shareholder-Letter.pdf)
+   [AMZN-2022-Shareholder](https://amzn-shareholder-letters-bucket.s3.eu-central-1.amazonaws.com/AMZN-2022-Shareholder-Letter.pdf)
+
 2. Upload them to the S3 bucket created by the stack
 3. This triggers the `ChunkDataFunction`
 4. The function:
@@ -98,6 +96,7 @@ Each trainee must:
    - Starts a Bedrock ingestion job
 
 5. Documents are chunked, embedded, and stored in **S3 Vectors**
+6. Verify Function logs and Bedrock Knowledge base data sources
 
 ---
 
@@ -182,7 +181,7 @@ Send the same request again.
 
 Expected:
 
-- The model now answers freely
+- Based on the available information, I cannot provide a complete answer about how to buy Amazon stocks. The given context does not contain specific instructions for purchasing Amazon shares. To buy Amazon stocks, you would typically need to open a brokerage account, fund it, and place an order for Amazon (AMZN) shares through your chosen platform. For accurate and up-to-date information on purchasing Amazon stocks, it's advisable to consult a licensed financial advisor or a reputable online brokerage service.
 
 ---
 

@@ -128,7 +128,7 @@ POST /prompt-rag
 
 This uses Bedrock’s **retrieve_and_generate** API.
 
-**Make sure to enable the llm used in Bedrock for your AWS Account before calling /retrieve_and_generate**
+**Make sure to enable the llm used in Bedrock for your AWS Account before calling /retrieve_and_generate Api**
 
 **Endpoint**
 

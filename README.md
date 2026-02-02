@@ -122,11 +122,13 @@ POST /prompt-rag
 }
 ```
 
-This uses Bedrock’s **retrieve_and_generate** API.
-
 ---
 
 ### Retrieve + Converse (Guardrail-enabled)
+
+This uses Bedrock’s **retrieve_and_generate** API.
+
+**Make sure to enable the llm used in Bedrock for your AWS Account before calling /retrieve_and_generate**
 
 **Endpoint**
 
